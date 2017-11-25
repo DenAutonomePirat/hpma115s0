@@ -50,3 +50,8 @@ func (h *Hpma115s0) ReadParticleMeasurement() *Measurement {
 func (h *Hpma115s0) Close() {
 	h.Port.Close()
 }
+
+func (h *Hpma115s0) StartParticleMeasurement() {
+	cmd := []byte{0x68, 0x01, 0x01, 0x96}
+	h.Port.Write(cmd)
+}

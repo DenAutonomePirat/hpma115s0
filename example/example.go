@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("morning")
 
 	options := serial.OpenOptions{
-		PortName:        "/dev/ttyACM0",
+		PortName:        "/dev/tty31",
 		BaudRate:        9600,
 		DataBits:        8,
 		StopBits:        1,
